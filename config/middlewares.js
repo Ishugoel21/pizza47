@@ -1,7 +1,6 @@
 module.exports = [
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
   {
     name: 'strapi::cors',
     config: {
@@ -11,6 +10,7 @@ module.exports = [
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
+      exposeHeaders: ['Content-Disposition'], // Allows files and images to be downloaded/viewed properly
     },
   },
   'strapi::poweredBy',
