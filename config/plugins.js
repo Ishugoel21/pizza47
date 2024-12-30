@@ -1,8 +1,11 @@
 module.exports = {
   upload: {
-    provider: 'local',
+    provider: 'cloudinary',
     providerOptions: {
-      sizeLimit: 50000000, // Set the max file size limit (10 MB in this case)
+      cloud_name: 'cloudinary',  // Replace with your Cloudinary cloud name
+      api_key: '728469492284454',        // Replace with your Cloudinary API key
+      api_secret: 'bzGxWbxUNZpgMLEKWoZ0VnwYGzo'  // Replace with your Cloudinary API secret
+      folder: 'strapi-media',         // Optional: Specify a folder name for organization
     },
   },
 };
