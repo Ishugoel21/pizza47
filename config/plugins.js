@@ -2,10 +2,10 @@ module.exports = {
   upload: {
     provider: 'cloudinary',
     providerOptions: {
-      cloud_name: 'cloudinary',  // Replace with your Cloudinary cloud name
-      api_key: '728469492284454',        // Replace with your Cloudinary API key
-      api_secret: 'bzGxWbxUNZpgMLEKWoZ0VnwYGzo'  // Replace with your Cloudinary API secret
-      folder: 'strapi-media',         // Optional: Specify a folder name for organization
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,  // Use the environment variable
+      api_key: process.env.CLOUDINARY_API_KEY,        // Use the environment variable
+      api_secret: process.env.CLOUDINARY_API_SECRET,  // Use the environment variable
+      folder: 'strapi-media',                         // Optional: Specify a folder name for organization
     },
   },
 };
