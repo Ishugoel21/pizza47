@@ -1,12 +1,12 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', '0.0.0.0'), // Ensures Strapi listens on all available interfaces
-  port: env.int('PORT', process.env.PORT || 1337), // Dynamically sets the port
-  url: env('PUBLIC_URL', 'http://localhost:1337/'), // Your public URL
+  host: env('HOST', '0.0.0.0'), // Ensure it listens on all available network interfaces
+  port: env.int('PORT', process.env.PORT || 1337), // Dynamically use the port provided by Render
+  url: env('PUBLIC_URL', process.env.PUBLIC_URL || 'http://localhost:1337/'), // Ensure PUBLIC_URL uses Render's environment variable if set
   app: {
     keys: env.array('APP_KEYS'),
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-  proxy: true, // Optional: usually used for reverse proxies like Azure
+  proxy: true, // Enable if behind a proxy (like Render or Azure App Service)
 });
