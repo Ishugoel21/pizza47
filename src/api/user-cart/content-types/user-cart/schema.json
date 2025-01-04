@@ -23,14 +23,18 @@
       "relation": "manyToMany",
       "target": "api::product.product",
       "mappedBy": "user_carts",
-      "onDelete": "cascade"
+      "joinTable": {
+        "name": "user_cart_products"
+      }
     },
     "users_permissions_users": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "user_carts",
-      "onDelete": "set null"
+      "joinTable": {
+        "name": "user_cart_users"
+      }
     },
     "userId": {
       "type": "integer"
