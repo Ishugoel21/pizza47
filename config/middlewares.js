@@ -1,16 +1,34 @@
 module.exports = [
   'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
       origin: [
+<<<<<<< HEAD
         'https://pizza12-five.vercel.app', 
         'https://pizza12-11vt4srm9-ishugoel21s-projects.vercel.app'
+=======
+        'https://pizza12-five.vercel.app',
+        'https://pizza12-11vt4srm9-ishugoel21s-projects.vercel.app',
+>>>>>>> d009c98fb05893330afc10f098184c733673e1b5
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
+      exposeHeaders: ['Content-Disposition'],
     },
   },
   'strapi::poweredBy',
