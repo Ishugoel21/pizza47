@@ -22,14 +22,14 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "user_carts",  // Change inversedBy to mappedBy
+      "mappedBy": "user_carts", 
       "onDelete": "cascade"
     },
     "users_permissions_users": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "user_carts",  // Change inversedBy to mappedBy
+      "mappedBy": "user_carts", 
       "onDelete": "set null"
     },
     "userId": {
