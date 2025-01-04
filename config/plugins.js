@@ -1,12 +1,8 @@
 module.exports = {
-    upload: {
-      provider: 'cloudinary',
-      providerOptions: {
-        cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-        api_key: process.env.CLOUDINARY_API_KEY,
-        api_secret: process.env.CLOUDINARY_API_SECRET,
-        secure: true, // Enable secure URLs
-      },
+  upload: {
+    provider: 'local', // Use the local file system for image storage
+    providerOptions: {
+      sizeLimit: 50000000, // Set the file size limit to 50 MB (50 * 1024 * 1024)
     },
-  };
-  
+  },
+};
