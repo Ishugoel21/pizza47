@@ -46,13 +46,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "products"
+      "mappedBy": "products"  // Use mappedBy instead of inversedBy
     },
     "user_carts": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::user-cart.user-cart",
-      "inversedBy": "products"
+      "mappedBy": "products"  // Change inversedBy to mappedBy
     }
   }
 }
