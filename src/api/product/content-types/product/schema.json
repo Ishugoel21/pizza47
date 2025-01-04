@@ -52,7 +52,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::user-cart.user-cart",
-      "inversedBy": "products"
+      "mappedBy": "products"
     }
   }
-} 
+}
