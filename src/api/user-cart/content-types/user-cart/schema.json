@@ -22,19 +22,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "user_carts",
-      "joinTable": {
-        "name": "user_cart_products"
-      }
+      "inversedBy": "user_carts"
     },
     "users_permissions_users": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "user_carts",
-      "joinTable": {
-        "name": "user_cart_users"
-      }
+      "inversedBy": "user_carts"
     },
     "userId": {
       "type": "integer"
