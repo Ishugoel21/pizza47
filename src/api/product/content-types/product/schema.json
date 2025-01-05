@@ -46,16 +46,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "mappedBy": "products"
+      "inversedBy": "products"
     },
     "user_carts": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::user-cart.user-cart",
-      "mappedBy": "products",
-      "joinTable": {
-        "name": "product_user_carts"
-      }
+      "inversedBy": "products"
     }
   }
-}
+} 
