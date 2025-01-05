@@ -4,7 +4,7 @@
   "info": {
     "singularName": "user-cart",
     "pluralName": "user-carts",
-    "displayName": "User Cart",
+    "displayName": "User  Cart",
     "description": ""
   },
   "options": {
@@ -22,7 +22,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "inversedBy": "user_carts"
+      "mappedBy": "user_carts"
     },
     "users_permissions_users": {
       "type": "relation",
