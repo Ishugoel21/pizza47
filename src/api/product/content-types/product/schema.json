@@ -22,15 +22,10 @@
       "type": "biginteger"
     },
     "images": {
-      "type": "media",
-      "multiple": true,
+      "type": "string",
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "regex": "^https?://.*",
+      "description": "URL of the product image"
     },
     "sizes": {
       "type": "json",
@@ -55,4 +50,4 @@
       "inversedBy": "products"
     }
   }
-} 
+}
