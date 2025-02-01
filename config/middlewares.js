@@ -1,6 +1,10 @@
 module.exports = [
   'strapi::errors',
   'strapi::security',
+<<<<<<< HEAD
+=======
+  'strapi::cors',
+>>>>>>> 8c93e7ea04b898a25e3121a7b180dabbaf753efc
   {
     name: 'strapi::cors',
     config: {
