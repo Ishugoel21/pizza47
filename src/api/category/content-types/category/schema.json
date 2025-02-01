@@ -16,8 +16,8 @@
       "required": true
     },
     "icon": {
-      "type": "string",
-      "regex": "^https?://.*",
+      "type": "media",
+      "multiple": false,
       "required": true
     },
     "color": {
