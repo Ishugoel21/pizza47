@@ -22,10 +22,10 @@
       "type": "biginteger"
     },
     "images": {
-      "type": "string",
+      "type": "media",
+      "multiple": true,
       "required": false,
-      "regex": "^https?://.*",
-      "description": "URL of the product image"
+      "description": "Product images"
     },
     "sizes": {
       "type": "json",
